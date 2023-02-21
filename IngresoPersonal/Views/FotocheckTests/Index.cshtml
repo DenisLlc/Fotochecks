@@ -1,0 +1,149 @@
+﻿@*@model IEnumerable<IngresoPersonal.Models.FotocheckTest>*@
+@model IPagedList<IngresoPersonal.Models.FotocheckTest>
+
+@{
+    ViewBag.Title = "Registro";
+}
+
+@using PagedList.Mvc;
+@using PagedList;
+
+<h2 class="mb-3">Registro</h2>
+
+<p>
+    @Html.ActionLink("Crear Registro", "Create", "FotocheckTests", null, new { @class = " btn btn-primary " })
+    @using (@Html.BeginForm("Index", "FotocheckTests", FormMethod.Get))
+    {
+        <div class="d-flex">
+            <input type="text" name="search" placeholder="Ingresa DNI" class="form-control me-3" />
+            <input type="submit" name="submit" value="Buscar" class="btn btn-outline-success" />
+        </div>
+        
+    }
+</p>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Cod_Per)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Cod_Tarjeta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Cod_Trabajador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Nombres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Apellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Domicilio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().DNI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Activo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Fotos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Cod_Tarjeta2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().cod_Fotocheck)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().GrupoSanguineo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().alergias)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Cargo)
+            </th>
+            <th>
+                Acciones
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cod_Per)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cod_Tarjeta)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cod_Trabajador)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombres)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellidos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Domicilio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DNI)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Activo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fotos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cod_Tarjeta2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cod_Fotocheck)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GrupoSanguineo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.alergias)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cargo)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.id }, new { @class = " btn btn-outline-warning btn-sm " })
+                    @Html.ActionLink("Detalle", "Details", new { id = item.id }, new { @class = " btn btn-outline-success btn-sm " })
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.id }, new { @class = " btn btn-outline-danger btn-sm " })
+                </td>
+            </tr>
+        }
+
+    </table>
+    @Html.PagedListPager(
+        Model,
+        i=>Url.Action("Index","FotocheckTests",
+        new { i, search = Request.QueryString["search"] }),
+        new PagedListRenderOptions()
+        {
+            LiElementClasses = new string[] { "page-item" },
+            UlElementClasses = new[] { "pagination" },
+            LinkToPreviousPageFormat = "Anterior",
+            LinkToNextPageFormat = "Siguiente",
+            ClassToApplyToLastListItemInPager = "page-previus",
+            ClassToApplyToFirstListItemInPager = "page-next",
+            FunctionToTransformEachPageLink = (li,a) =>
+            {
+                a.AddCssClass("page-link");
+                li.InnerHtml = a.ToString();
+                return li;
+            }
+        })
+</div>

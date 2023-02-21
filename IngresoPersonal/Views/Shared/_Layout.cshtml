@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="">
+    <nav class="navbar navbar-expand-lg bg-light fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a href="/Home/Index" class="me-2"> <img src="~/imgs/logo-tisur-2.svg" width="120" /> </a>
+                @*<a class="navbar-brand" href="#">Hidden brand</a>*@
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                @*Submenu personal*@
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Registro
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Ver Personal", "Index", "FotocheckTests", null, new { @class = " dropdown-item " })</li>
+                        <li>@Html.ActionLink("Registrar Personal", "Create", "FotocheckTests", null, new { @class = " dropdown-item " })</li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    
+                </li>
+                @*Submenu configuracion*@
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Configuración
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Ver Usuarios", "Index", "Users", null, new { @class = " dropdown-item " })</li>
+                        <li>@Html.ActionLink("Crear Usuario", "Create", "Users", null, new { @class = " dropdown-item " })</li>
+                    </ul>
+                </li>
+            </ul>
+                @*Contenido navbar derecha*@
+                <form class="d-flex" role="search">
+                    @*<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">*@
+                    @*Botón de cerrar sesión*@
+                    <h4 class="me-2 mb-lg-0 mt-1">Hola @HttpContext.Current.Session["username"].ToString()</h4>
+                    @Html.ActionLink("Cerrar Sesión", "Logout", "Home", null, new { @class = "btn btn-outline-danger" })
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Nombre de la aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Usuarios", "Index", "Users")</li>
+                    <li>@Html.ActionLink("Personal", "Index", "FotocheckTests")</li>
+                    <li>@Html.ActionLink("Cerrar Sesión", "Logout", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>*@
+
+    <div class="container body-content mt-3">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>Copyright &copy; Tisur - @DateTime.Now.Year - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

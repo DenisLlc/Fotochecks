@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ASISTENCIA_TISURModelStoreContainer" CdmEntityContainer="ASISTENCIA_TISUREntities">
+    <EntitySetMapping Name="FotocheckTest">
+      <EntityTypeMapping TypeName="ASISTENCIA_TISURModel.FotocheckTest">
+        <MappingFragment StoreEntitySet="FotocheckTest">
+          <ScalarProperty Name="Cod_Per" ColumnName="Cod_Per" />
+          <ScalarProperty Name="Cod_Tarjeta" ColumnName="Cod_Tarjeta" />
+          <ScalarProperty Name="Cod_Trabajador" ColumnName="Cod_Trabajador" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Domicilio" ColumnName="Domicilio" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Fotos" ColumnName="Fotos" />
+          <ScalarProperty Name="Cod_Tarjeta2" ColumnName="Cod_Tarjeta2" />
+          <ScalarProperty Name="cod_Fotocheck" ColumnName="cod_Fotocheck" />
+          <ScalarProperty Name="GrupoSanguineo" ColumnName="GrupoSanguineo" />
+          <ScalarProperty Name="alergias" ColumnName="alergias" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="ASISTENCIA_TISURModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ASISTENCIA_TISURModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="idRol" ColumnName="idRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
