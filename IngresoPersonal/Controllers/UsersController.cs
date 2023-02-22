@@ -11,6 +11,7 @@ using IngresoPersonal.Permissions;
 
 namespace IngresoPersonal.Controllers
 {
+    [Authorize]
     [PermissionsRolAttibute(Models.RolesInd.Admin)]
     public class UsersController : Controller
     {

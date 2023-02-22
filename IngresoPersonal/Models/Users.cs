@@ -11,15 +11,22 @@ namespace IngresoPersonal.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Users
     {
         public int id { get; set; }
+        [Required(ErrorMessage = "El campo nombres es obligatorio.")]
         public string name { get; set; }
+        [Required(ErrorMessage = "El campo apellidos es obligatorio.")]
         public string lastName { get; set; }
+        [Required(ErrorMessage = "El campo DNI es obligatorio.")]
         public string DNI { get; set; }
+        [Required(ErrorMessage = "El campo nombre de usuario es obligatorio.")]
         public string username { get; set; }
+        [Required(ErrorMessage = "El campo contraseña es obligatorio.")]
         public string password { get; set; }
+        [Required(ErrorMessage = "El campo correo es obligatorio.")]
         public string email { get; set; }
         public int idRol { get; set; }
     

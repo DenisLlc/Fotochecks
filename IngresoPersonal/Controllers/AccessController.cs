@@ -9,6 +9,17 @@ using System.Web.Security;
 
 namespace IngresoPersonal.Controllers
 {
+    /// <summary>
+    /// Clase controlador de acceso
+    /// </summary>
+    /// <remarks>
+    /// </remarks>
+    /// <example>
+    /// <code>
+    /// </code>
+    /// <c>
+    /// </c>
+    /// </example>
     public class AccessController : Controller
     {
         // GET: Access
@@ -16,7 +27,12 @@ namespace IngresoPersonal.Controllers
         {
             return View();
         }
-
+        /// <summary>
+        /// Logeo
+        /// </summary>
+        /// <param name="User">Recibe el valor del nombre de usuario logeado</param>
+        /// <param name="Pass">Recibe el valor de la contraseña del usuario logeado</param>
+        /// <returns>Devuelve una redirección a la página Index</returns>
         [HttpPost]
         public ActionResult Login(string User, string Pass)
         {

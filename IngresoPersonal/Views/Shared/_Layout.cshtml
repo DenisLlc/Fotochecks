@@ -21,16 +21,14 @@
                 @*Submenu personal*@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Registro
+                        Registros
                     </a>
                     <ul class="dropdown-menu">
-                        <li>@Html.ActionLink("Ver Personal", "Index", "FotocheckTests", null, new { @class = " dropdown-item " })</li>
-                        <li>@Html.ActionLink("Registrar Personal", "Create", "FotocheckTests", null, new { @class = " dropdown-item " })</li>
+                        <li>@Html.ActionLink("Ver Registros", "Index", "FotocheckTests", null, new { @class = " dropdown-item " })</li>
+                        <li>@Html.ActionLink("Crear Registro", "Create", "FotocheckTests", null, new { @class = " dropdown-item " })</li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    
-                </li>
+ 
                 @*Submenu configuracion*@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -52,30 +50,6 @@
             </div>
         </div>
     </nav>
-
-
-    @*<div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nombre de la aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Usuarios", "Index", "Users")</li>
-                    <li>@Html.ActionLink("Personal", "Index", "FotocheckTests")</li>
-                    <li>@Html.ActionLink("Cerrar Sesión", "Logout", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>*@
 
     <div class="container body-content mt-3">
         @RenderBody()

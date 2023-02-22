@@ -2,16 +2,16 @@
 @model IPagedList<IngresoPersonal.Models.FotocheckTest>
 
 @{
-    ViewBag.Title = "Registro";
+    ViewBag.Title = "Registros";
 }
 
 @using PagedList.Mvc;
 @using PagedList;
 
-<h2 class="mb-3">Registro</h2>
+<h2 class="mb-3">Registros</h2>
 
 <p>
-    @Html.ActionLink("Crear Registro", "Create", "FotocheckTests", null, new { @class = " btn btn-primary " })
+    @Html.ActionLink("Crear Registro »", "Create", "FotocheckTests", null, new { @class = " btn btn-primary " })
     @using (@Html.BeginForm("Index", "FotocheckTests", FormMethod.Get))
     {
         <div class="d-flex">
@@ -26,46 +26,60 @@
     <table class="table table-striped">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.First().Cod_Per)
+                @*@Html.DisplayNameFor(model => model.First().Cod_Per)*@
+                Cód. Persona
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.First().Cod_Tarjeta)
+                @*@Html.DisplayNameFor(model => model.First().Cod_Tarjeta)*@
+                Cód. Tarjeta
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.First().Cod_Trabajador)
+                @*@Html.DisplayNameFor(model => model.First().Cod_Trabajador)*@
+                Cód. Trabajador
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.First().Nombres)
+                @*@Html.DisplayNameFor(model => model.First().Nombres)*@
+                Nombres
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.First().Apellidos)
+                @*@Html.DisplayNameFor(model => model.First().Apellidos)*@
+                Apellidos
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.First().Domicilio)
+                @*@Html.DisplayNameFor(model => model.First().Domicilio)*@
+                Domicilio
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.First().DNI)
+                @*@Html.DisplayNameFor(model => model.First().DNI)*@
+                DNI
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.First().Activo)
+                @*@Html.DisplayNameFor(model => model.First().Activo)*@
+                Estado
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.First().Fotos)
+                @*@Html.DisplayNameFor(model => model.First().Fotos)*@
+                Fotos
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.First().Cod_Tarjeta2)
+                @*@Html.DisplayNameFor(model => model.First().Cod_Tarjeta2)*@
+                Cód. Tarjeta2
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.First().cod_Fotocheck)
+                @*@Html.DisplayNameFor(model => model.First().cod_Fotocheck)*@
+                Cód. Fotocheck
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.First().GrupoSanguineo)
+                @*@Html.DisplayNameFor(model => model.First().GrupoSanguineo)*@
+                Grupo Sanguíneo
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.First().alergias)
+                @*@Html.DisplayNameFor(model => model.First().alergias)*@
+                Alergias
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.First().Cargo)
+                @*@Html.DisplayNameFor(model => model.First().Cargo)*@
+                Cargo
             </th>
             <th>
                 Acciones

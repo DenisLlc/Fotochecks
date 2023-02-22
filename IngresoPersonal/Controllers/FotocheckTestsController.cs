@@ -14,6 +14,7 @@ using PagedList;
 
 namespace IngresoPersonal.Controllers
 {
+    [Authorize]
     [PermissionsRolAttibute(Models.RolesInd.Admin, Models.RolesInd.User)]    
     public class FotocheckTestsController : Controller
     {

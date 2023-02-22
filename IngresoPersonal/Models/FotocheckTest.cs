@@ -11,22 +11,35 @@ namespace IngresoPersonal.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class FotocheckTest
     {
+        [Required(ErrorMessage = "El campo cód. persona es obligatorio.")]
         public int Cod_Per { get; set; }
+        [Required(ErrorMessage ="El campo cód. tarjeta es obligatorio.")]
         public string Cod_Tarjeta { get; set; }
+        [Required(ErrorMessage = "El campo cód. trabajador es obligatorio.")]
         public string Cod_Trabajador { get; set; }
+        [Required(ErrorMessage = "El campo nombres es obligatorio.")]
         public string Nombres { get; set; }
+        [Required(ErrorMessage = "El campo apellidos es obligatorio.")]
         public string Apellidos { get; set; }
+        [Required(ErrorMessage = "El campo domicilio es obligatorio.")]
         public string Domicilio { get; set; }
+        [Required(ErrorMessage = "El campo DNI es obligatorio.")]
         public string DNI { get; set; }
         public Nullable<short> Activo { get; set; }
         public string Fotos { get; set; }
+        [Required(ErrorMessage = "El campo cód. tarjeta 2 es obligatorio.")]
         public string Cod_Tarjeta2 { get; set; }
+        [Required(ErrorMessage = "El campo cód. fotocheck es obligatorio.")]
         public string cod_Fotocheck { get; set; }
+        [Required(ErrorMessage = "El campo grupo sanguineo es obligatorio.")]
         public string GrupoSanguineo { get; set; }
+        [Required(ErrorMessage = "El campo alergias es obligatorio.")]
         public string alergias { get; set; }
+        [Required(ErrorMessage = "El campo cargo es obligatorio.")]
         public string Cargo { get; set; }
         public int id { get; set; }
     }

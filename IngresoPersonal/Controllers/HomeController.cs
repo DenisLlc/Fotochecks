@@ -34,7 +34,7 @@ namespace IngresoPersonal.Controllers
 
         public ActionResult Error()
         {
-            ViewBag.Message = "Usted no cuenta con permiso";
+            ViewBag.Message = "Usted no cuenta con permiso para este módulo.";
 
             return View();
 
@@ -44,6 +44,7 @@ namespace IngresoPersonal.Controllers
         {
             FormsAuthentication.SignOut();
             Session["User"] = null;
+            Session["username"] = null;
 
             return RedirectToAction("Login", "Access");
         }

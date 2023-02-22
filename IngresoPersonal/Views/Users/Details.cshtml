@@ -1,17 +1,21 @@
 ﻿@model IngresoPersonal.Models.Users
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Details</h2>
+<h2>Detalles</h2>
 
 <div>
-    <h4>Users</h4>
+    <h4>Usuarios</h4>
+
+    @Html.ActionLink("« Ver Usuarios", "Index", null, new { @class = " btn btn-primary " })
+
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.name)
+            @*@Html.DisplayNameFor(model => model.name)*@
+            Nombres
         </dt>
 
         <dd>
@@ -19,7 +23,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.lastName)
+            @*@Html.DisplayNameFor(model => model.lastName)*@
+            Apellidos
         </dt>
 
         <dd>
@@ -27,7 +32,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DNI)
+            @*@Html.DisplayNameFor(model => model.DNI)*@
+            DNI
         </dt>
 
         <dd>
@@ -35,7 +41,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.username)
+            @*@Html.DisplayNameFor(model => model.username)*@
+            Nombre de Usuario
         </dt>
 
         <dd>
@@ -43,7 +50,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.password)
+            @*@Html.DisplayNameFor(model => model.password)*@
+            Contraseña
         </dt>
 
         <dd>
@@ -51,7 +59,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.email)
+            @*@Html.DisplayNameFor(model => model.email)*@
+            Correo
         </dt>
 
         <dd>
@@ -59,7 +68,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Roles.name)
+            @*@Html.DisplayNameFor(model => model.Roles.name)*@
+            Rol
         </dt>
 
         <dd>
@@ -69,6 +79,5 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }, new { @class = " btn btn-warning " })    
 </p>
